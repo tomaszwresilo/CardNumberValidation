@@ -1,0 +1,114 @@
+* {box-sizing:border-box;}
+
+body{
+    background-color: #2817e7;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1{
+    font-size: 3rem;
+    text-align: center;
+}
+
+main{
+    background-color: white;
+    color: black;
+    width: 60%;
+    height: 40%;
+    text-align: center;
+
+}
+
+footer{
+    margin-top: 15%;
+    margin-bottom: 1%;
+    font-size: 2rem;
+}
+input[type=text]{
+    width: 35%;
+    padding: 10px;
+    border: 2px solid #eee;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius:10px;
+    text-align: center;
+
+  }
+
+button{
+    border:none;
+    border-radius:5px;
+    height: 37px;
+}
+button:hover{
+    background-color: Gold;
+}
+
+
+button:active{
+    background-color: white;
+}
+
+
+.flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.Site-content {
+    flex: 1;
+  }
+
+.resolut{
+    margin-top: 10px;
+}
+
+
+
+  /* Animations */
+
+  .shake {
+    animation-name: swaying;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  .shake-1 {
+    top: 0px;
+    left: 300px;
+  }
+
+  .shake-2 {
+    top: 20px;
+    right: 700px;
+  }
+
+  @keyframes swaying {
+    from {
+     transform: skewX(15deg);
+    }
+
+    to {
+     transform: skewX(-15deg);
+    }
+  }
+
+
+
+  .wave::after {
+    content: '✋';
+    --emoji: '👋';
+    animation-name: twoFrames;
+    animation-duration: 1s;
+}
+
+@keyframes twoFrames {
+    50% {
+        content: var(--emoji);
+    }
+}
+
+

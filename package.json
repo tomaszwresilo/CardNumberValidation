@@ -1,0 +1,13 @@
+{
+  "name": "CreditCardVerification",
+  "version": "1.0",
+  "main": "index.js",
+  "author": "Tomasz <twresilo@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
