@@ -1,114 +1,166 @@
-* {box-sizing:border-box;}
-
-body{
-    background-color: #2817e7;
-    color: white;
-    font-family: 'Roboto', sans-serif;
+* {
+  box-sizing: border-box;
 }
 
-h1{
-    font-size: 3rem;
-    text-align: center;
+body {
+  background-color: #2817e7;
+  color: white;
+  font-family: 'Roboto', sans-serif;
 }
 
-main{
-    background-color: white;
-    color: black;
-    width: 60%;
-    height: 40%;
-    text-align: center;
+h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+main {
+  font-size: 1.7rem;
+  background-color: white;
+  color: black;
+  width: 60%;
+  height: 40%;
+  text-align: center;
 
 }
 
-footer{
-    margin-top: 15%;
-    margin-bottom: 1%;
-    font-size: 2rem;
-}
-input[type=text]{
-    width: 35%;
-    padding: 10px;
-    border: 2px solid #eee;
-    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
-    border-radius:10px;
-    text-align: center;
-
-  }
-
-button{
-    border:none;
-    border-radius:5px;
-    height: 37px;
-}
-button:hover{
-    background-color: Gold;
+img {
+  width: 90%;
+  margin-top: 10px;
 }
 
+aside {
+  font-size: 1.5rem;
+  background: #ea6645;
+  border: solid #ea6645;
+  border-top-width: medium;
+  border-right-width: medium;
+  border-bottom-width: medium;
+  border-left-width: medium;
+  border-radius: 4px 4px 4px 4px;
+  cursor: default;
+  height: 71px;
+  position: absolute;
+  right: -90px;
+  text-align: center;
+  top: 250px;
+  transform: rotate(-90deg);
+  width: 250px;
+  color: white;
+  font-weight: 600;
 
-button:active{
-    background-color: white;
+}
+
+section{
+  font-size: 1.5rem;
+  background: #ea6645;
+  border: solid #ea6645;
+  border-top-width: medium;
+  border-right-width: medium;
+  border-bottom-width: medium;
+  border-left-width: medium;
+  border-radius: 4px 4px 4px 4px;
+  cursor: default;
+  height: 71px;
+  position: absolute;
+  left: -90px;
+  text-align: center;
+  top: 250px;
+  transform: rotate(-90deg);
+  width: 250px;
+  color: white;
+  font-weight: 600;
 }
 
 
-.flex{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
+footer {
+  margin-top: 15%;
+  margin-bottom: 1%;
+  font-size: 2rem;
+}
+
+input[type=text] {
+  width: 35%;
+  padding: 10px;
+  border: 2px solid #eee;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  text-align: center;
+
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  height: 37px;
+}
+
+button:hover {
+  background-color: Gold;
+}
+
+
+button:active {
+  background-color: white;
+}
+
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .Site-content {
-    flex: 1;
-  }
+  flex: 1;
+}
 
-.resolut{
-    margin-top: 10px;
+#resolut {
+  margin-top: 20px;
 }
 
 
 
-  /* Animations */
+/* Animations */
 
-  .shake {
-    animation-name: swaying;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+.shake {
+  animation-name: swaying;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.shake-1 {
+  top: 0px;
+  left: 300px;
+}
+
+.shake-2 {
+  top: 20px;
+  right: 700px;
+}
+
+@keyframes swaying {
+  from {
+    transform: skewX(15deg);
   }
 
-  .shake-1 {
-    top: 0px;
-    left: 300px;
+  to {
+    transform: skewX(-15deg);
   }
-
-  .shake-2 {
-    top: 20px;
-    right: 700px;
-  }
-
-  @keyframes swaying {
-    from {
-     transform: skewX(15deg);
-    }
-
-    to {
-     transform: skewX(-15deg);
-    }
-  }
+}
 
 
 
-  .wave::after {
-    content: '✋';
-    --emoji: '👋';
-    animation-name: twoFrames;
-    animation-duration: 1s;
+.wave::after {
+  content: '✋';
+  --emoji: '👋';
+  animation-name: twoFrames;
+  animation-duration: 1s;
 }
 
 @keyframes twoFrames {
-    50% {
-        content: var(--emoji);
-    }
+  50% {
+    content: var(--emoji);
+  }
 }
-
-
