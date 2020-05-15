@@ -1,10 +1,16 @@
 {
   "name": "CreditCardVerification",
-  "version": "1.0",
+  "version": "1.0.0",
   "main": "index.js",
+  "repository": "https://github.com/tomaszwresilo/CardNumberValidation",
   "author": "Tomasz <twresilo@gmail.com>",
   "license": "MIT",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html --public-url ./"
   },
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "parcel-bundler": "^1.12.4"
+  }
+}
