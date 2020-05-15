@@ -21,6 +21,7 @@ document.getElementById("check").onclick = function verifySupplier() {
             }
         }
 
+        // funkcja która przyjmuje za parametr clearCardNumber
 
         const countInTableOddNumbers = [];
         const countInTableEvenNumbers = [];
@@ -64,8 +65,10 @@ document.getElementById("check").onclick = function verifySupplier() {
         for (const el of countInTableEvenNumbers) {
             totalCountEvenNumbers += el;
         }
+        // funcja ma zwracac returnem modullo z sumy [totalCountOddNumbers + totalCountEvenNumbers] % 10
 
 
+        // if ma sprawdzac czy funkcja wyzej zwracam modulo rowne zero czy nie
 
 
         if ([totalCountOddNumbers + totalCountEvenNumbers] % 10 != 0) {
@@ -75,6 +78,8 @@ document.getElementById("check").onclick = function verifySupplier() {
 
         if ([totalCountOddNumbers + totalCountEvenNumbers] % 10 == 0) {
 
+
+            // Funckcja która sprawdza warunki i zwraca returnem nazwy.
 
             if (clearCardNumber.length == 16 && clearCardNumber[0] == 5 && clearCardNumber[1] == 1 || clearCardNumber[0] == 5 && clearCardNumber[1] == 2 || clearCardNumber[0] == 5 && clearCardNumber[1] == 3 || clearCardNumber[0] == 5 && clearCardNumber[1] == 4 || clearCardNumber[0] == 5 && clearCardNumber[1] == 5 || clearCardNumber[0] == 2 && clearCardNumber[1] == 2) {
 
@@ -91,7 +96,7 @@ document.getElementById("check").onclick = function verifySupplier() {
 
         }
 
-
+            // innerhtml wyników funkcji z długością karty i jej indexami
     }
     document.getElementById("cardnumber").value = "";
 }
