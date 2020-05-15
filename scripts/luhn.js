@@ -1,4 +1,4 @@
-function checkLuhn(clearCardNumber){
+function checkLuhn(clearCardNumber) {
 
     const countInTableOddNumbers = [];
     const countInTableEvenNumbers = [];
@@ -43,8 +43,10 @@ function checkLuhn(clearCardNumber){
         totalCountEvenNumbers += el;
     }
 
-    return [totalCountOddNumbers + totalCountEvenNumbers] % 10;
+    return [totalCountOddNumbers + totalCountEvenNumbers] % 10 == 0;
 
 }
 
-export { checkLuhn };
+export {
+    checkLuhn
+};

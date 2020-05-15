@@ -21,17 +21,17 @@ document.getElementById("check").onclick = function verifySupplier() {
             }
         }
 
-        if (checkLuhn(clearCardNumber) != 0) {
+        if (checkLuhn(clearCardNumber) == false) {
             document.getElementById("resolut").innerHTML = `Invalid number!`;
         }
 
 
-        if (checkLuhn(clearCardNumber) == 0) {
+        if (checkLuhn(clearCardNumber) == true) {
 
-        document.getElementById("resolut").innerHTML = checkLength(clearCardNumber);
+            document.getElementById("resolut").innerHTML = checkLength(clearCardNumber);
 
         }
 
     }
     document.getElementById("cardnumber").value = "";
-}
+    }
