@@ -6,8 +6,11 @@ document.getElementById("check").onclick = function verifySupplier() {
 
     const input = document.getElementById("cardnumber").value;
 
+
+
     if (input === "") {
         document.getElementById("resolut").innerHTML = `Pleas enter something :)`;
+
     } else {
 
 
@@ -19,19 +22,18 @@ document.getElementById("check").onclick = function verifySupplier() {
         }
 
 
-        const countInTable1 = [];
-        const countInTable2 = [];
-
+        const countInTableOddNumbers = [];
+        const countInTableEvenNumbers = [];
 
 
         if (clearCardNumber.length % 2 == 0) {
 
             clearCardNumber.forEach((el, index) => {
                 if (index % 2 != 0) {
-                    countInTable2.push(parseInt(el))
+                    countInTableEvenNumbers.push(parseInt(el))
                 }
                 if (index % 2 == 0) {
-                    countInTable1.push(parseInt(el * 2))
+                    countInTableOddNumbers.push(parseInt(el * 2))
                 }
             })
         }
@@ -40,39 +42,38 @@ document.getElementById("check").onclick = function verifySupplier() {
 
             clearCardNumber.forEach((el, index) => {
                 if (index % 2 == 0) {
-                    countInTable2.push(parseInt(el))
+                    countInTableEvenNumbers.push(parseInt(el))
                 }
                 if (index % 2 != 0) {
-                    countInTable1.push(parseInt(el * 2))
+                    countInTableOddNumbers.push(parseInt(el * 2))
                 }
             })
         }
 
 
-        const splitcountInTable1 = countInTable1.toString().split(',').join('').split('');
+        const countInTableOddNumbersSplited = countInTableOddNumbers.toString().split(',').join('').split('');
 
-        let total1 = 0;
+        let totalCountOddNumbers = 0;
 
-        for (const el of splitcountInTable1) {
-            total1 += parseInt(el);
+        for (const el of countInTableOddNumbersSplited) {
+            totalCountOddNumbers += parseInt(el);
         }
 
-        let total2 = 0;
+        let totalCountEvenNumbers = 0;
 
-        for (const el of countInTable2) {
-            total2 += el;
+        for (const el of countInTableEvenNumbers) {
+            totalCountEvenNumbers += el;
         }
 
 
 
 
-        if ([total1 + total2] % 10 != 0) {
+        if ([totalCountOddNumbers + totalCountEvenNumbers] % 10 != 0) {
             document.getElementById("resolut").innerHTML = `Invalid number!`;
         }
 
 
-        if ([total1 + total2] % 10 == 0) {
-            console.log("passed");
+        if ([totalCountOddNumbers + totalCountEvenNumbers] % 10 == 0) {
 
 
             if (clearCardNumber.length == 16 && clearCardNumber[0] == 5 && clearCardNumber[1] == 1 || clearCardNumber[0] == 5 && clearCardNumber[1] == 2 || clearCardNumber[0] == 5 && clearCardNumber[1] == 3 || clearCardNumber[0] == 5 && clearCardNumber[1] == 4 || clearCardNumber[0] == 5 && clearCardNumber[1] == 5 || clearCardNumber[0] == 2 && clearCardNumber[1] == 2) {
@@ -85,12 +86,12 @@ document.getElementById("check").onclick = function verifySupplier() {
 
                 document.getElementById("resolut").innerHTML = "American Express";
             } else {
-                document.getElementById("resolut").innerHTML = "Only Visa, Mastercard and American Express checking is working!";
+                document.getElementById("resolut").innerHTML = "Only Visa, Mastercard and American Express credit card checking is working!";
             }
 
         }
 
 
     }
-
+    document.getElementById("cardnumber").value = "";
 }

@@ -164,3 +164,31 @@ button:active {
     content: var(--emoji);
   }
 }
+
+@media (max-width: 700px){
+  h1{
+    font-size: 1.5rem;
+  }
+
+  main {
+    font-size: 1rem;
+    background-color: white;
+    color: black;
+    width: 80%;
+    text-align: center;
+  }
+
+  aside{
+    display: none;
+  }
+
+  section{
+    display: none;
+  }
+
+  input[type=text]{
+    width: 70%;
+  }
+
+
+}
