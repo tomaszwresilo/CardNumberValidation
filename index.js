@@ -1,12 +1,12 @@
 import './style/normalize.css';
 import './style/style.css';
-
+import {checkLuhn} from './scripts/luhn';
+import {checkLength} from './scripts/length'
 
 document.getElementById("check").onclick = function verifySupplier() {
 
+
     const input = document.getElementById("cardnumber").value;
-
-
 
     if (input === "") {
         document.getElementById("resolut").innerHTML = `Pleas enter something :)`;
@@ -21,94 +21,17 @@ document.getElementById("check").onclick = function verifySupplier() {
             }
         }
 
-        // funkcja która przyjmuje za parametr clearCardNumber
-
-        const countInTableOddNumbers = [];
-        const countInTableEvenNumbers = [];
-
-
-        if (clearCardNumber.length % 2 == 0) {
-
-            clearCardNumber.forEach((el, index) => {
-                if (index % 2 != 0) {
-                    countInTableEvenNumbers.push(parseInt(el))
-                }
-                if (index % 2 == 0) {
-                    countInTableOddNumbers.push(parseInt(el * 2))
-                }
-            })
-        }
-
-        if (clearCardNumber.length % 2 != 0) {
-
-            clearCardNumber.forEach((el, index) => {
-                if (index % 2 == 0) {
-                    countInTableEvenNumbers.push(parseInt(el))
-                }
-                if (index % 2 != 0) {
-                    countInTableOddNumbers.push(parseInt(el * 2))
-                }
-            })
-        }
-
-
-        const countInTableOddNumbersSplited = countInTableOddNumbers.toString().split(',').join('').split('');
-
-        let totalCountOddNumbers = 0;
-
-        for (const el of countInTableOddNumbersSplited) {
-            totalCountOddNumbers += parseInt(el);
-        }
-
-        let totalCountEvenNumbers = 0;
-
-        for (const el of countInTableEvenNumbers) {
-            totalCountEvenNumbers += el;
-        }
-        // funcja ma zwracac returnem modullo z sumy [totalCountOddNumbers + totalCountEvenNumbers] % 10
-
-
-        // if ma sprawdzac czy funkcja wyzej zwracam modulo rowne zero czy nie
-
-
-        if ([totalCountOddNumbers + totalCountEvenNumbers] % 10 != 0) {
+        if (checkLuhn(clearCardNumber) != 0) {
             document.getElementById("resolut").innerHTML = `Invalid number!`;
         }
 
 
-        if ([totalCountOddNumbers + totalCountEvenNumbers] % 10 == 0) {
-
-            // Funckcja która sprawdza warunki i zwraca returnem nazwy.
-            function checkLength(clearCardNumber){
-
-            if (clearCardNumber.length == 16 && clearCardNumber[0] == 5 && clearCardNumber[1] == 1 || clearCardNumber[0] == 5 && clearCardNumber[1] == 2 || clearCardNumber[0] == 5 && clearCardNumber[1] == 3 || clearCardNumber[0] == 5 && clearCardNumber[1] == 4 || clearCardNumber[0] == 5 && clearCardNumber[1] == 5 || clearCardNumber[0] == 2 && clearCardNumber[1] == 2) {
-
-               return "MasterCard";
-
-
-            } else if (clearCardNumber.length == 13 || clearCardNumber.length == 16 && clearCardNumber[0] == 4) {
-
-                return "Visa";
-
-
-            } else if (clearCardNumber.length == 15 && clearCardNumber[0] == 3 && clearCardNumber[1] == 4 || clearCardNumber[0] == 3 && clearCardNumber[1] == 7) {
-
-                return "American Express";
-
-
-            } else {
-
-                return "Only Visa, Mastercard and American Express credit card checking is working!";
-
-            }
-
-        }
+        if (checkLuhn(clearCardNumber) == 0) {
 
         document.getElementById("resolut").innerHTML = checkLength(clearCardNumber);
 
         }
 
-            // innerhtml wyników funkcji z długością karty i jej indexami
     }
     document.getElementById("cardnumber").value = "";
 }
