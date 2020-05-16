@@ -29,18 +29,14 @@ img {
 }
 
 aside {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   background: #ea6645;
   border: solid #ea6645;
-  border-top-width: medium;
-  border-right-width: medium;
-  border-bottom-width: medium;
-  border-left-width: medium;
   border-radius: 4px 4px 4px 4px;
   cursor: default;
   height: 71px;
   position: absolute;
-  right: -90px;
+  right: -89px;
   text-align: center;
   top: 250px;
   transform: rotate(-90deg);
@@ -91,7 +87,8 @@ input[type=text] {
 button {
   border: none;
   border-radius: 5px;
-  height: 37px;
+  height: 50px;
+
 }
 
 button:hover {
@@ -165,9 +162,13 @@ button:active {
   }
 }
 
-@media (max-width: 700px){
+@media (max-width: 850px){
   h1{
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+    padding: 20px 20px;
+  }
+  h2{
+    padding-bottom: 10px;
   }
 
   main {
