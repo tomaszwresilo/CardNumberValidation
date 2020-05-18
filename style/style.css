@@ -36,7 +36,7 @@ aside {
   cursor: default;
   height: 71px;
   position: absolute;
-  right: -89px;
+  right: -88px;
   text-align: center;
   top: 250px;
   transform: rotate(-90deg);
@@ -165,7 +165,7 @@ button:active {
 @media (max-width: 850px){
   h1{
     font-size: 2.5rem;
-    padding: 20px 20px;
+    padding: 0px 20px;
   }
   h2{
     padding-bottom: 10px;
