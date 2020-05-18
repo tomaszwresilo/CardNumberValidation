@@ -194,3 +194,14 @@ button:active {
 
 
 }
+
+@media (max-width: 850px){
+  h1{
+    font-size: 2rem;
+  }
+  main{
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+}
+~~
