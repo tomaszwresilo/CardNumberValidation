@@ -16,9 +16,11 @@ Preview 🖼️
 ![card](https://github.com/tomaszwresilo/CardNumberValidation/assets/63786542/bec73b7b-7e94-42c7-972a-a2401bff7c28)
 
 Demo 🌐
+
 You can try the application live by visiting the [Credit Card Verification Demo](https://cardnumbervalidation.netlify.app)
 
 Getting Started 🚀
+
 To get a local copy of the project and run it, you can follow these steps:
 
 Clone the repository: `git clone https://github.com/tomaszwresilo/CardNumberValidation`
