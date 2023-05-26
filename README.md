@@ -38,6 +38,7 @@ Parcel Bundler
 Scripts 📜
 
 start: Runs the development server using Parcel.
+
 build: Builds the production-ready files.
 
 🚀 Happy credit card verification! ✨
